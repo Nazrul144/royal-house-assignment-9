@@ -1,0 +1,121 @@
+[
+    {
+      "id": 1,
+      "segment": "Single-Family-Homes",
+      "estate_title": "Modern-Single-Family Home",
+      "image": "https://i.ibb.co/wdKdBZT/24725-1.jpg",
+      "description": "A charming townhouse nestled in a quiet suburban neighborhood. Experience the comfort of spacious interiors, a tranquil backyard garden, and a modern kitchen.",
+      "price": 250000,
+      "status": "available",
+      "area": 1800,
+      "location": "Kuakata, Patuakhali",
+      "facilities": ["spacious living room", "backyard garden", "modern kitchen"],
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "segment": "Apartments",
+      "estate_title": "Luxury Apartment in Downtown",
+      "image": "https://i.ibb.co/Gt0p9rh/pexels-photo-106399.jpg",
+      "description": "Indulge in urban luxury with breathtaking city views from this exquisite apartment. Featuring a spacious living room, sleek modern kitchen, and upscale amenities.",
+      "price": 350000,
+      "status": "available",
+      "area": 1200,
+      "location": "Shadar Road, Barisal",
+      "facilities": ["spacious living room", "modern kitchen"],
+      "rating": 4.8
+    },
+    {
+      "id": 3,
+      "segment": "Student Housing",
+      "estate_title": "Student Residence Near Campus",
+      "image": "https://i.ibb.co/kHQ91Tn/full-shot-students-preparing-exam.jpg",
+      "description": "Comfortable student housing conveniently located near the university campus. Offering ample space, modern amenities, and a conducive environment for academic success.",
+      "price": 150000,
+      "status": "available",
+      "area": 1000,
+      "location": "Purbachal, Narayanganj",
+      "facilities": ["spacious living room", "modern kitchen"],
+      "rating": 4.2
+    },
+    {
+      "id": 4,
+      "segment": "Senior Living Communities",
+      "estate_title": "Tranquil Senior Community",
+      "image": "https://i.ibb.co/3fVwR0t/Most-Beautiful-Houses-In-The-World-House-M-featured-on-architecture-beast-39.jpg",
+      "description": "A peaceful community designed for seniors seeking comfort and companionship. Enjoy spacious living areas, a picturesque garden, and thoughtful amenities.",
+      "price": 200000,
+      "status": "available",
+      "area": 1500,
+      "location": "Senior Community Area, Dhaka",
+      "facilities": ["spacious living room", "backyard garden"],
+      "rating": 4.6
+    },
+    {
+      "id": 5,
+      "segment": "Vacation Rentals",
+      "estate_title": "Seaside Vacation Retreat",
+      "image": "https://i.ibb.co/X3Kv1FQ/umbrella-chair-around-beautiful-luxury-outdoor-swimming-pool-with-sea-ocean-view-hotel-resort-holida.jpg",
+      "description": "Escape to paradise in this stunning vacation rental overlooking the ocean. Relax in a spacious living room, savor culinary delights in the modern kitchen, and unwind in the serene backyard garden.",
+      "price": 5000,
+      "status": "available",
+      "area": 2000,
+      "location": "Cox's Bazar Sea Beach, Chittagong",
+      "facilities": ["spacious living room", "backyard garden", "modern kitchen"],
+      "rating": 4.9
+    },
+    {
+        "id": 6,
+        "segment": "Urban Residences",
+        "estate_title": "Modern Townhouse with City Views",
+        "image": "https://i.ibb.co/X583W37/analog-landscape-city-with-buildings.jpg",
+        "description": "Experience urban sophistication in this stylish townhouse boasting panoramic city views and contemporary living. Enjoy luxurious amenities including a rooftop terrace and a sleek modern kitchen.",
+        "price": 300000,
+        "status": "available",
+        "area": 1600,
+        "location": "Urban Area, Rajshahi",
+        "facilities": ["spacious living room", "rooftop terrace", "modern kitchen"],
+        "rating": 4.7
+    },
+    {
+      "id": 7,
+      "segment": "Apartments",
+      "estate_title": "Sleek Downtown Apartment",
+      "image": "https://i.ibb.co/2M63g2Z/360-F-660982943-n468-V9swk3gv-JDw96-CVt1yci-WWy5ck2s.jpg",
+      "description": "Immerse yourself in urban sophistication in this sleek and modern apartment located in the bustling downtown area. With a spacious living room and inviting balcony, it's urban living at its finest.",
+      "price": 400000,
+      "status": "available",
+      "area": 1000,
+      "location": "Jaflong, Sylhet",
+      "facilities": ["spacious living room", "balcony", "modern kitchen"],
+      "rating": 4.6
+    },
+    {
+      "id": 8,
+      "segment": "Student Housing",
+      "estate_title": "Student Dormitory with Study Areas",
+      "image": "https://i.ibb.co/NWbNhd5/charming-yellow-house-with-wooden-windows-green-grassy-garden.jpg",
+      "description": "Enhance your academic journey in this purpose-built student dormitory equipped with study areas and communal spaces. Enjoy a supportive environment and convenient access to campus facilities.",
+      "price": 120000,
+      "status": "available",
+      "area": 800,
+      "location": "Dhaka University, Dhaka",
+      "facilities": ["shared study areas", "communal kitchen"],
+      "rating": 4.0
+    },
+    {
+        "id": 9,
+        "segment": "Holiday Retreats",
+        "estate_title": "Hillside Chalet Getaway",
+        "image": "https://i.ibb.co/tHdVjBh/remote-accomadtion.jpg",
+        "description": "Discover serenity in this charming hillside chalet nestled amidst tranquil woodlands. With rustic elegance, a cozy fireplace, and panoramic vistas, it's an idyllic retreat for nature lovers.",
+        "price": 3000,
+        "status": "available",
+        "area": 1500,
+        "location": "Mountain Range, Chittagong",
+        "facilities": ["rustic living room", "fireplace", "scenic views"],
+        "rating": 4.8
+      }
+      
+  ]
+  
