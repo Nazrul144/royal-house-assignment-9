@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
+
+import {  HelmetProvider } from 'react-helmet-async';
 
 import {
   createBrowserRouter,
@@ -14,6 +15,9 @@ import Blog from './components/Blog.jsx';
 import AuthProvider from './components/provider/AuthProvider.jsx';
 import HomeDatails from './components/HomeDatails.jsx';
 import Register from './components/Register.jsx';
+import UpdateProfile from './components/UpdateProfile.jsx';
+import RegalHouse from './components/RegalHouse.jsx';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx';
 
 
 const router = createBrowserRouter([
@@ -40,9 +44,18 @@ const router = createBrowserRouter([
         element: <Blog></Blog>
       },
       {
+        path: '/updateProfile',
+        element: <UpdateProfile></UpdateProfile>
+      },
+      {
         path: '/homeDetails/:id',
         element: <HomeDatails></HomeDatails>
       },
+      {
+        path: '/regalHouse',
+        element: <PrivateRoute><RegalHouse></RegalHouse></PrivateRoute>
+      }
+     
     ]
   },
 ]);
@@ -51,8 +64,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AuthProvider>
-    <RouterProvider router={router} />
-    </AuthProvider>
+       <AuthProvider>
+          <HelmetProvider>
+            <RouterProvider router={router} />
+          </HelmetProvider>  
+     </AuthProvider>
   </React.StrictMode>,
 )

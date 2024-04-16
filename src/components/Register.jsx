@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import  {  useContext, useState } from 'react';
 import { FaEye, FaEyeSlash, FaImages, FaUserEdit } from 'react-icons/fa';
 import { IoKey, IoMail } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, signInWithPopup } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, signInWithPopup, updateProfile } from "firebase/auth";
 import app from '../firebaseProvider/firebase.config';
+import { AuthContext } from './provider/AuthProvider';
 
 
 
@@ -16,6 +17,8 @@ const Register = () => {
 
     const auth = getAuth(app);
    
+    const {createUser} = useContext(AuthContext)
+    console.log(createUser);
 
     //Gmail authentication:
     const handleRegister = (e) => {
@@ -25,6 +28,14 @@ const Register = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(username, photo, email, password)
+
+        createUser(email, password)
+        .then(result => {
+            console.log(result.user)
+        })
+        .catch(error => {
+            console.error(error)
+        })
 
         //Validation Check:
         if(password.length < 6){
@@ -36,6 +47,7 @@ const Register = () => {
             return;
         }
 
+        //Clear the state:
         setRegisterError('')
         setSuccess('')
 
@@ -44,6 +56,15 @@ const Register = () => {
             .then(result => {
                 const user = result.user;
                 setSuccess('User Created Successfully!')
+                updateProfile(result.user,{    
+                displayName: username,
+                photoURL:photo
+                })
+                .then(()=> console.log('Profile Updated!'))
+                .catch(error => {
+                    console.log(error)
+                })
+            
             })
             .catch(error => {
                 console.error(error)
@@ -93,14 +114,14 @@ const Register = () => {
                         <div className="space-y-1 text-sm">
                             <label htmlFor="username" className="block dark:text-gray-600">Username</label>
                             <div className='relative'>
-                                <input type="text" name="username" placeholder="Username" className="w-full px-8 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 border-2 border-gray-800" />
+                                <input type="text" name="username" placeholder="Username" required className="w-full px-8 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 border-2 border-gray-800" />
                                 <div className='absolute top-4 left-2'>
                                     <FaUserEdit className='text-xl' />
                                 </div>
                             </div>
                             <label htmlFor="url" className="block dark:text-gray-600">Photo URL</label>
                             <div className='relative'>
-                                <input type="text" name="photo" placeholder="Photo URL" className="w-full px-8 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 border-2 border-gray-800" />
+                                <input type="text" name="photo" placeholder="Photo URL" required className="w-full px-8 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 border-2 border-gray-800" />
                                 <div className='absolute top-4 left-2'>
                                     <FaImages className='text-xl' />
                                 </div>
@@ -108,7 +129,7 @@ const Register = () => {
 
                             <label htmlFor="email" className="block dark:text-gray-600">Email</label>
                             <div className='relative'>
-                                <input type="email" name="email" placeholder="Email" className="w-full px-8 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 border-2 border-gray-800" />
+                                <input type="email" name="email" placeholder="Email" required className="w-full px-8 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 border-2 border-gray-800" />
                                 <div className='absolute top-4 left-2'>
                                     <IoMail className='text-xl' />
                                 </div>
@@ -123,6 +144,7 @@ const Register = () => {
                                     name="password"
                                     id="password"
                                     placeholder="Password"
+                                    required
                                     className="w-full px-8 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 border-2 border-gray-800" />
                                 <div className='absolute top-4 right-3'>
                                     
@@ -142,18 +164,15 @@ const Register = () => {
                         </div>
 
                         <button className="block w-full p-3 text-center dark:text-gray-50 dark:bg-violet-600 font-bold rounded-lg bg-[tomato]">Sign in</button>
-
-                        <div className="errorDiv">
+                    </form>
+                    <div className="errorDiv">
                         {
-                            registerError && alert(registerError)
+                            registerError && <p className='text-red-600 font-semibold text-xl'>{registerError}</p>
                         }
                         {
-                            success && alert(success)
+                            success && <p className='text-green-500 font-semibold text-xl'>{success}</p>
                         }
                     </div>
-                    </form>
-
-                   
                     <div className="flex items-center pt-4 space-x-1">
                         <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
                         <p className="px-3 text-sm dark:text-gray-600">Login with social accounts</p>

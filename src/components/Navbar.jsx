@@ -1,13 +1,29 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from './provider/AuthProvider';
 
 const Navbar = () => {
+
+     const {user, logOut} = useContext(AuthContext);
+
+     const handleLogOut = () =>{
+        logOut()
+        .then(result =>{
+            console.log('Loge out successfully!')
+        })
+        .catch(error => {
+            console.log(error)
+        })
+     }
     const navLinks = <>
         <li><NavLink to='/' className={({isActive})=> isActive? 'border-2 border-orange-300 rounded-r-lg': ''}>Home</NavLink></li>
-        <li><NavLink to='/login' className={({isActive})=> isActive? 'border-2 border-orange-300 rounded-r-lg': ''}  >Login</NavLink></li>
+        <li><NavLink to='/updateProfile' className={({isActive})=> isActive? 'border-2 border-orange-300 rounded-r-lg': ''}>UpdateProfile</NavLink></li>
         <li><NavLink to='/register' className={({isActive})=> isActive? 'border-2 border-orange-300 rounded-r-lg': ''}>Register</NavLink></li>
         <li><NavLink to='/blog' className={({isActive})=> isActive? 'border-2 border-orange-300 rounded-r-lg': ''}>Blog</NavLink></li>
+        <li><NavLink to='/regalHouse' className={({isActive})=> isActive? 'border-2 border-orange-300 rounded-r-lg': ''}>Regal House</NavLink></li>
+
     </>
+    console.log(user?.photoURL);
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -20,7 +36,7 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <a className="btn btn-ghost text-xl">Regal House</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -28,7 +44,15 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    {
+                        user ? <>
+                        <span>{user?.email}</span>
+                        <span><img src={user?.photoURL} alt="" /></span>
+                        <a onClick={handleLogOut} className="btn">Sign out</a>
+                        </> :
+                        <Link to='/login'><button className='rounded-lg bg-slate-300 p-2 font-bold'>Login</button></Link>
+                    }
+                    
                 </div>
             </div>
         </div>
