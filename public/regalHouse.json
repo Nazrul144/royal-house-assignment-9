@@ -1,0 +1,236 @@
+[
+    {
+      "id": 1,
+      "segment": "Single-Family-Homes",
+      "estate_title": "Modern-Single-Family Home",
+      "image": "https://i.ibb.co/x1vKvCP/2151297256.jpg",
+      "description": "A single-family home is essentially a standalone residential structure, designed to be occupied by just one household. This house is an independent entity with its own land and facilities, like a unique kitchen, separate walls and individual utilities.",
+      "price": 250000,
+      "status": "available",
+      "area": 1800,
+      "location": "Kuakata, Patuakhali",
+      "facilities": [
+        "spacious living room",
+        "backyard garden",
+        "modern kitchen"
+      ],
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "segment": "Apartments",
+      "estate_title": "Luxury Apartment in Downtown",
+      "image": "https://i.ibb.co/k89Pf6j/2150920985-1.jpg",
+      "description": "Indulge in urban luxury with breathtaking city views from this exquisite apartment. Featuring a spacious living room, sleek modern kitchen, and upscale amenities.",
+      "price": 350000,
+      "status": "available",
+      "area": 1200,
+      "location": "Shadar Road, Barisal",
+      "facilities": [
+        "spacious living room",
+        "modern kitchen"
+      ],
+      "rating": 4.8
+    },
+    {
+      "id": 3,
+      "segment": "Student Housing",
+      "estate_title": "Student Residence Near Campus",
+      "image": "https://i.ibb.co/1KyfTVL/2151297224.jpg",
+      "description": "Comfortable student housing conveniently located near the university campus. Offering ample space, modern amenities, and a conducive environment for academic success.",
+      "price": 150000,
+      "status": "available",
+      "area": 1000,
+      "location": "Purbachal, Narayanganj",
+      "facilities": [
+        "spacious living room",
+        "modern kitchen"
+      ],
+      "rating": 4.2
+    },
+    {
+      "id": 4,
+      "segment": "Senior Living Communities",
+      "estate_title": "Tranquil Senior Community",
+      "image": "https://i.ibb.co/HgKzy4G/2150754904.jpg",
+      "description": "A peaceful community designed for seniors seeking comfort and companionship. Enjoy spacious living areas, a picturesque garden, and thoughtful amenities.",
+      "price": 200000,
+      "status": "available",
+      "area": 1500,
+      "location": "Senior Community Area, Dhaka",
+      "facilities": [
+        "spacious living room",
+        "backyard garden"
+      ],
+      "rating": 4.6
+    },
+    {
+      "id": 5,
+      "segment": "Vacation Rentals",
+      "estate_title": "Seaside Vacation Retreat",
+      "image": "https://i.ibb.co/Y7gQDhB/2150754930.jpg",
+      "description": "Escape to paradise in this stunning vacation rental overlooking the ocean. Relax in a spacious living room, savor culinary delights in the modern kitchen, and unwind in the serene backyard garden.",
+      "price": 5000,
+      "status": "available",
+      "area": 2000,
+      "location": "Cox's Bazar Sea Beach, Chittagong",
+      "facilities": [
+        "spacious living room",
+        "backyard garden",
+        "modern kitchen"
+      ],
+      "rating": 4.9
+    },
+    {
+      "id": 6,
+      "segment": "Urban Residences",
+      "estate_title": "Modern Townhouse with City Views",
+      "image": "https://i.ibb.co/K7GD7DF/2150761036.jpg",
+      "description": "Experience urban sophistication in this stylish townhouse boasting panoramic city views and contemporary living. Enjoy luxurious amenities including a rooftop terrace and a sleek modern kitchen.",
+      "price": 300000,
+      "status": "available",
+      "area": 1600,
+      "location": "Urban Area, Rajshahi",
+      "facilities": [
+        "spacious living room",
+        "rooftop terrace",
+        "modern kitchen"
+      ],
+      "rating": 4.7
+    },
+    {
+      "id": 7,
+      "segment": "Apartments",
+      "estate_title": "Sleek Downtown Apartment",
+      "image": "https://i.ibb.co/3CJw6J2/2150920983.jpg",
+      "description": "Immerse yourself in urban sophistication in this sleek and modern apartment located in the bustling downtown area. With a spacious living room and inviting balcony, it's urban living at its finest.",
+      "price": 400000,
+      "status": "available",
+      "area": 1000,
+      "location": "Jaflong, Sylhet",
+      "facilities": [
+        "spacious living room",
+        "balcony",
+        "modern kitchen"
+      ],
+      "rating": 4.6
+    },
+    {
+      "id": 8,
+      "segment": "Student Housing",
+      "estate_title": "Student Dormitory with Study Areas",
+      "image": "https://i.ibb.co/BCt1sCd/2151297138.jpg",
+      "description": "Enhance your academic journey in this purpose-built student dormitory equipped with study areas and communal spaces. Enjoy a supportive environment and convenient access to campus facilities.",
+      "price": 120000,
+      "status": "available",
+      "area": 800,
+      "location": "Dhaka University, Dhaka",
+      "facilities": [
+        "shared study areas",
+        "communal kitchen"
+      ],
+      "rating": 4.0
+    },
+    {
+      "id": 9,
+      "segment": "Holiday Retreats",
+      "estate_title": "Hillside Chalet Getaway",
+      "image": "https://i.ibb.co/2s2k2t1/chinese-house-digital-artwork-ap6if4klbr9bsstw-1.jpg",
+      "description": "Discover serenity in this charming hillside chalet nestled amidst tranquil woodlands. With rustic elegance, a cozy fireplace, and panoramic vistas, it's an idyllic retreat for nature lovers.",
+      "price": 3000,
+      "status": "available",
+      "area": 1500,
+      "location": "Mountain Range, Chittagong",
+      "facilities": [
+        "rustic living room",
+        "fireplace",
+        "scenic views"
+      ],
+      "rating": 4.8
+    },
+    {
+      "id": 10,
+      "segment": "Holiday Retreats",
+      "estate_title": "Hillside Chalet Getaway",
+      "image": "https://i.ibb.co/pxYN49v/red-brick-beautiful-house-kvetof9l98bai2tk.jpg",
+      "description": "Discover serenity in this charming hillside chalet nestled amidst tranquil woodlands. With rustic elegance, a cozy fireplace, and panoramic vistas, it's an idyllic retreat for nature lovers.",
+      "price": 3000,
+      "status": "available",
+      "area": 1500,
+      "location": "Mountain Range, Chittagong",
+      "facilities": [
+        "rustic living room",
+        "fireplace",
+        "scenic views"
+      ],
+      "rating": 4.8
+    },
+    {
+      "id": 11,
+      "segment": "Holiday Retreats",
+      "estate_title": "Hillside Chalet Getaway",
+      "image": "https://i.ibb.co/PDhqxx1/chinese-architectural-style-pavilion-built-top-mountain-wallpaper-background-illustration-911849-398.jpg",
+      "description": "Discover serenity in this charming hillside chalet nestled amidst tranquil woodlands. With rustic elegance, a cozy fireplace, and panoramic vistas, it's an idyllic retreat for nature lovers.",
+      "price": 3000,
+      "status": "available",
+      "area": 1500,
+      "location": "Mountain Range, Chittagong",
+      "facilities": [
+        "rustic living room",
+        "fireplace",
+        "scenic views"
+      ],
+      "rating": 4.8
+    },
+    {
+      "id": 12,
+      "segment": "Holiday Retreats",
+      "estate_title": "Hillside Chalet Getaway",
+      "image": "https://i.ibb.co/JrjhmVN/360-F-555616752-Qi-NEGAGVLByb9462-UV3t6nazu4ry-NC3z.jpg",
+      "description": "Discover serenity in this charming hillside chalet nestled amidst tranquil woodlands. With rustic elegance, a cozy fireplace, and panoramic vistas, it's an idyllic retreat for nature lovers.",
+      "price": 3000,
+      "status": "available",
+      "area": 1500,
+      "location": "Mountain Range, Chittagong",
+      "facilities": [
+        "rustic living room",
+        "fireplace",
+        "scenic views"
+      ],
+      "rating": 4.8
+    },
+    {
+      "id": 13,
+      "segment": "Holiday Retreats",
+      "estate_title": "Hillside Chalet Getaway",
+      "image": "https://i.ibb.co/dfPTnKf/d8lhrvi-6fed4ee1-1b75-4539-8dfc-4b225e99f385.jpg",
+      "description": "Discover serenity in this charming hillside chalet nestled amidst tranquil woodlands. With rustic elegance, a cozy fireplace, and panoramic vistas, it's an idyllic retreat for nature lovers.",
+      "price": 3000,
+      "status": "available",
+      "area": 1500,
+      "location": "Mountain Range, Chittagong",
+      "facilities": [
+        "rustic living room",
+        "fireplace",
+        "scenic views"
+      ],
+      "rating": 4.8
+    },
+    {
+      "id": 14,
+      "segment": "Holiday Retreats",
+      "estate_title": "Hillside Chalet Getaway",
+      "image": "https://i.ibb.co/2s2k2t1/chinese-house-digital-artwork-ap6if4klbr9bsstw-1.jpg",
+      "description": "Discover serenity in this charming hillside chalet nestled amidst tranquil woodlands. With rustic elegance, a cozy fireplace, and panoramic vistas, it's an idyllic retreat for nature lovers.",
+      "price": 3000,
+      "status": "available",
+      "area": 1500,
+      "location": "Mountain Range, Chittagong",
+      "facilities": [
+        "rustic living room",
+        "fireplace",
+        "scenic views"
+      ],
+      "rating": 4.8
+    }
+  ]
