@@ -13,6 +13,7 @@ import Login from './components/Login.jsx';
 import Register from './components/UpdateProfile.jsx';
 import Blog from './components/Blog.jsx';
 import AuthProvider from './components/provider/AuthProvider.jsx';
+import HomeDatails from './components/HomeDatails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: '/blog',
         element: <Blog></Blog>
+      },
+      {
+        path: '/homeDetails/:id',
+        element: <HomeDatails></HomeDatails>
       },
     ]
   },

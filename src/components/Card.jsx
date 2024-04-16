@@ -1,8 +1,8 @@
-import React from 'react';
+
+import { Link } from 'react-router-dom';
 
 const Card = ({house}) => {
     const {segment, estate_title, image, description, price, status, area, location, facilities, rating} = house;
-    console.log(segment)
     return (
         <div>
             <div className="card h-full bg-base-100 shadow-xl">
@@ -16,7 +16,8 @@ const Card = ({house}) => {
                     <p>Status:{status}</p>
                     <p>Rating:{rating}</p>
                     <div className="card-actions">
-                        <button className="btn btn-primary">View Details</button>
+                    <Link to={`/homeDetails/${house.id}`} className='bg-[#23BE0A] rounded-full px-4 py-2'>View Details</Link>
+
                     </div>
                 </div>
             </div>
