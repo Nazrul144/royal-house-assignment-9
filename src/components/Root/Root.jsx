@@ -2,6 +2,9 @@ import React from 'react';
 import {Outlet} from 'react-router-dom';
 import Navbar from '../Navbar';
 
+import { ToastContainer } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 const Root = () => {
     return (
@@ -9,7 +12,9 @@ const Root = () => {
             <Navbar></Navbar>
             <Outlet></Outlet>
         </div>
+      
     );
+    
 };
 
 export default Root;
