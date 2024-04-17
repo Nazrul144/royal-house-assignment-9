@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Root = () => {
     return (
-        <div className='w-2/3 mx-auto border-2 border-x-green-500'>
+        <div className='w-2/3 mx-auto'>
             <Navbar></Navbar>
             <Outlet></Outlet>
         </div>

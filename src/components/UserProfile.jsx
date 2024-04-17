@@ -1,9 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AuthContext } from './provider/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const UserProfile = () => {
     const { user, loading } = useContext(AuthContext);
+       useEffect(()=>{
+        AOS.init();
+    },[])
 
     console.log(user)
     const { displayName, photoURL, email } = user || {};
@@ -12,6 +18,7 @@ const UserProfile = () => {
             <span className="loading loading-bars loading-md "></span>
         </div>
     }
+ 
     return (
         <div>
             <Helmet>
@@ -20,15 +27,15 @@ const UserProfile = () => {
 
             <div className='grid grid-cols-10 gap-4 mt-16'>
                 <div className='col-span-2'>
-                    <img src={photoURL} alt="" />
+                    <img data-aos="fade-up" data-aos-duration='1000' src={photoURL} alt="" />
                     <div className="px-4 py-4">
                         <div className="font-bold text-xl mb-2">{displayName}</div>
                         <p className="text-gray-700 text-base">{email}</p>
                     </div>
                 </div>
-                <div className='col-span-8'>
-                    <h1 className='text-4xl font-bold text-center mt-6'>Welcome! Nazrul Islam</h1>
-                    <p className="py-6 px-8 font-poppins font-medium text-xl text-justify mt-10"> Hi, I am Nazrul Islam. I am running 26. I am from aristocratic muslim family. I am doing BSC on the
+                <div data-aos-easing="zoom-in-up" data-aos-duration='1000' className='col-span-8'>
+                    <h1 data-aos-easing="zoom-in-up" data-aos-duration='1000' className='text-4xl font-bold text-center mt-6'>Welcome! Nazrul Islam</h1>
+                    <p data-aos-easing="zoom-in-up" data-aos-duration='1000' className="py-6 px-8 font-poppins font-medium text-xl text-justify mt-10"> Hi, I am Nazrul Islam. I am running 26. I am from aristocratic muslim family. I am doing BSC on the
                         department of CSE Computer 'Science and Engineering'. Right now, I am also a student of Programming Hero where I am
                         learning web development. My future plane is that I want to touch the zenith of the success that is to be a world class
                         web developer. Thank you for reading my Bio. </p>

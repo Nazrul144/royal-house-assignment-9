@@ -1,5 +1,5 @@
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-import  { useContext, useState } from 'react';
+import  { useContext, useEffect, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { IoKey, IoMail } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
@@ -7,11 +7,23 @@ import app from "../firebaseProvider/firebase.config";
 import { AuthContext } from "./provider/AuthProvider";
 import {useLocation, useNavigate} from 'react-router-dom'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 const Login = () => {
+
 
     const [showPassword, setShowPassword] = useState(false);
     const [success, setSuccess] = useState('')
     const [registerError, setRegisterError] = useState('');
+
+    useEffect(()=>{
+        AOS.init();
+    },[])
 
 
     const location = useLocation()
@@ -32,7 +44,7 @@ const Login = () => {
         signInUser(email, password)
         .then(result => {
             console.log(result.user)
-            alert('Successfully logged in!')
+            alert('Logged in successfully!')
             //Navigate after login:
             navigate(location?.state ? location.state : '/')
         })
@@ -97,10 +109,10 @@ const Login = () => {
     return (
         <div>
             <h1>This is login page</h1>
-            <div className="loginDiv border-2 border-red-400">
+            <div data-aos-easing="zoom-in-up" data-aos-duration='1000' className="loginDiv border-2 border-red-400">
                 <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 border-2 mx-auto border-green-400 justify-center items-center">
                     <h1 className="text-2xl font-bold text-center">Login</h1>
-                    <form onSubmit={handleLogin} noValidate="" action="" className="space-y-6">
+                    <form  onSubmit={handleLogin} noValidate="" action="" className="space-y-6">
                         <div className="space-y-1 text-sm">
                             <label htmlFor="username" className="block dark:text-gray-600">Email</label>
                             <div className='relative'>
@@ -137,7 +149,7 @@ const Login = () => {
                                 <a rel="noopener noreferrer" href="#">Forgot Password?</a>
                             </div>
                         </div>
-                        <button className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600">Log in</button>
+                        <button className="block w-full p-3 text-center dark:text-gray-50 bg-sky-400 font-bold rounded-lg">Log in</button>
                     </form>
 
                     <div className="errorDiv">
@@ -176,6 +188,7 @@ const Login = () => {
                     </p>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

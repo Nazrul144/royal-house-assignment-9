@@ -11,7 +11,7 @@ const Navbar = () => {
     const handleLogOut = () => {
         logOut()
             .then(result => {
-                console.log('Loge out successfully!')
+                alert('Successfully logged out!')
                 
             })
             .catch(error => {
@@ -41,7 +41,7 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-2xl font-bold font-poppins"> <span className='text-yellow-500' >REGAL</span> <span className='text-sky-400'>HOUSE</span></a>
+                    <Link to='/' className="btn btn-ghost text-2xl font-bold font-poppins"> <span className='text-yellow-500' >REGAL</span> <span className='text-sky-400'>HOUSE</span></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

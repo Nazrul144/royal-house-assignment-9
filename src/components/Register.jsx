@@ -8,6 +8,9 @@ import app from '../firebaseProvider/firebase.config';
 import { AuthContext } from './provider/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 
@@ -18,13 +21,9 @@ const Register = () => {
 
     const auth = getAuth(app);
    
-    const {createUser, loading} = useContext(AuthContext)
+    const {createUser} = useContext(AuthContext)
     console.log(createUser);
-    if (loading) {
-        return <div className='flex justify-center items-center'>
-            <span className="loading loading-bars loading-md "></span>
-        </div>
-    }
+  
 
     //Gmail authentication:
     const handleRegister = (e) => {
@@ -35,33 +34,40 @@ const Register = () => {
         const password = e.target.password.value;
         console.log(username, photo, email, password)
 
-        createUser(email, password)
-        .then(result => {
-            console.log(result.user)
-        })
-        .catch(error => {
-            console.error(error)
-        })
+          //Clear the state:
+          setRegisterError('')
+          setSuccess('')
+  
 
-        //Validation Check:
+
+          //Validation Check:
         if(password.length < 6){
             setRegisterError('Password should be at least 6 character or long!');
             return;
         }
-        if(!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(password)){
+        if(!/[A-z]/.test(password)){
             setRegisterError('Make a strong password with various character');
-            return;
+            return ;
         }
 
-        //Clear the state:
-        setRegisterError('')
-        setSuccess('')
+        createUser(email, password)
+        .then(result => {
+            console.log(result.user)
+            
+        })
+        .catch(error => {
+            console.error(error)
 
+        })
+
+        
+     
         //Creating user:
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
                 setSuccess('User Created Successfully!')
+                
 
                 //Update profile:
                 updateProfile(result.user,{    
@@ -122,7 +128,7 @@ const Register = () => {
                     <h1 className="text-2xl font-bold text-center">Register Now!</h1>
 
 
-                    <form onSubmit={handleRegister} noValidate="" action="" className="space-y-6">
+                    <form data-aos-easing="zoom-in" data-aos-duration='2000' onSubmit={handleRegister} noValidate="" action="" className="space-y-6">
                         <div className="space-y-1 text-sm">
                             <label htmlFor="username" className="block dark:text-gray-600">Username</label>
                             <div className='relative'>
@@ -175,7 +181,7 @@ const Register = () => {
                             </div>
                         </div>
 
-                        <button className="block w-full p-3 text-center dark:text-gray-50 dark:bg-violet-600 font-bold rounded-lg bg-[tomato]">Sign in</button>
+                        <button className="block w-full p-3 text-center dark:text-gray-50 dark:bg-violet-600 font-bold rounded-lg bg-[tomato]">Register</button>
                     </form>
                     <div className="errorDiv">
                         {
@@ -214,7 +220,7 @@ const Register = () => {
                     </p>
                 </div>
             </div>
-
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

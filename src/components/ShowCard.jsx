@@ -1,10 +1,12 @@
-import React from 'react';
+
 
 const ShowCard = ({ regalHouse }) => {
     const { id, description, image, segment } = regalHouse;
+
+   
     return (
         <div>
-            <div className="card h-full bg-base-100 shadow-xl">
+            <div className="card h-full bg-base-100 shadow-xl ">
                 <figure><img src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">
