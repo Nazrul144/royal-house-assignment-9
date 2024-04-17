@@ -123,8 +123,8 @@ const Register = () => {
                 <title>Regal House | Register</title>
             </Helmet>
          
-            <div className="loginDiv border-2 border-red-400">
-                <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 border-2 mx-auto border-green-400 justify-center items-center">
+            <div className="loginDiv">
+                <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 mt-8 mx-auto shadow-xl">
                     <h1 className="text-2xl font-bold text-center">Register Now!</h1>
 
 
@@ -176,9 +176,7 @@ const Register = () => {
                                     <IoKey className='text-xl' />
                                 </div>
                             </div>
-                            <div className="flex justify-end text-xs dark:text-gray-600">
-                                <a rel="noopener noreferrer" href="#">Forgot Password?</a>
-                            </div>
+                           
                         </div>
 
                         <button className="block w-full p-3 text-center dark:text-gray-50 dark:bg-violet-600 font-bold rounded-lg bg-[tomato]">Register</button>

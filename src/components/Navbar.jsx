@@ -41,7 +41,7 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost text-2xl font-bold font-poppins"> <span className='text-yellow-500' >REGAL</span> <span className='text-sky-400'>HOUSE</span></Link>
+                    <Link to='/' className="btn btn-ghost lg:text-2xl font-bold font-poppins"> <span className='text-yellow-500' >REGAL</span> <span className='text-sky-400'>HOUSE</span></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -60,7 +60,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                             {showName && <span className="tooltip tooltip-open tooltip-bottom" data-tip= {user.displayName} ></span>}
-                            <span>{user?.email}</span>
+                            {/* <span >{user?.email}</span> */}
                             <a onClick={handleLogOut} className="btn">Logout</a>
 
                         </> :

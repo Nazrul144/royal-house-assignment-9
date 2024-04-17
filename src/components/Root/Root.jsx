@@ -5,12 +5,14 @@ import Navbar from '../Navbar';
 import { ToastContainer } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from '../Footer';
 
 const Root = () => {
     return (
         <div className='w-2/3 mx-auto'>
             <Navbar></Navbar>
             <Outlet></Outlet>
+            <Footer></Footer>
         </div>
       
     );

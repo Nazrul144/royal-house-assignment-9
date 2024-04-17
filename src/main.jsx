@@ -18,6 +18,8 @@ import UpdateProfile from './components/UpdateProfile.jsx';
 import RegalHouse from './components/RegalHouse.jsx';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx';
 import UserProfile from './components/UserProfile.jsx';
+import AboutUs from './components/Root/AboutUs.jsx';
+import Contact from './components/Contact.jsx';
 
 
 const router = createBrowserRouter([
@@ -53,6 +55,14 @@ const router = createBrowserRouter([
       {
         path: '/userProfile',
         element: <UserProfile></UserProfile>
+      },
+      {
+        path: '/aboutus',
+        element: <AboutUs></AboutUs>
+      },
+      {
+        path: '/contact',
+        element: <Contact></Contact>
       }
      
     ]
