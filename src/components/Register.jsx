@@ -8,6 +8,8 @@ import app from '../firebaseProvider/firebase.config';
 import { AuthContext } from './provider/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 
+import 'animate.css';
+
 
 
 
@@ -68,20 +70,20 @@ const Register = () => {
                 setSuccess('User Created Successfully!')
                 
 
-                //Update profile:
-                updateProfile(result.user,{    
-                displayName: username,
-                photoURL:photo
+                // //Update profile:
+                // updateProfile(result.user,{    
+                // displayName: username,
+                // photoURL:photo
                 
-                })
-                .then(()=> console.log('Profile Updated!'))
-                .catch(error => {
-                    console.log(error)
-                })
+                // })
+                // .then(()=> console.log('Profile Updated!'))
+                // .catch(error => {
+                //     console.log(error)
+                // })
 
 
 
-                
+
             
             })
             .catch(error => {
@@ -131,7 +133,7 @@ const Register = () => {
                     <h1 className="text-2xl font-bold text-center">Register Now!</h1>
 
 
-                    <form data-aos-easing="zoom-in" data-aos-duration='2000' onSubmit={handleRegister} noValidate="" action="" className="space-y-6">
+                    <form data-aos-easing="zoom-in" data-aos-duration='2000' onSubmit={handleRegister} noValidate="" action="" className="space-y-6  animate__animated animate__zoomIn">
                         <div className="space-y-1 text-sm">
                             <label htmlFor="username" className="block dark:text-gray-600">Username</label>
                             <div className='relative'>

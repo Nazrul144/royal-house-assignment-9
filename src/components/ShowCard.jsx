@@ -1,4 +1,4 @@
-
+import 'animate.css';
 
 const ShowCard = ({ regalHouse }) => {
     const { id, description, image, segment } = regalHouse;
@@ -6,8 +6,8 @@ const ShowCard = ({ regalHouse }) => {
    
     return (
         <div>
-            <div className="card h-full bg-base-100 shadow-xl ">
-                <figure><img src={image} alt="Shoes" /></figure>
+            <div className="card h-full bg-base-100 shadow-xl animate__animated animate__zoomIn ">
+                <figure><img src={image} alt="house" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">
                         {segment}

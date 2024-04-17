@@ -60,7 +60,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                             {showName && <span className="tooltip tooltip-open tooltip-bottom" data-tip= {user.displayName} ></span>}
-                            {/* <span >{user?.email}</span> */}
+                            <span >{user?.email}</span>
                             <a onClick={handleLogOut} className="btn">Logout</a>
 
                         </> :
