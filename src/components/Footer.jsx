@@ -22,7 +22,7 @@ const Footer = () => {
                     </div>
                 </nav>
                 <aside>
-                    <p>Copyright © 2024 - All right reserved by Regal House Authority!</p>
+                    <p>Copyright © 2024 - All right reserved by Regal House Ltd!</p>
                 </aside>
             </footer>
         </div>

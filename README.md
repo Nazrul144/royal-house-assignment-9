@@ -1,8 +1,20 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Regal House
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+"Regal House" is a luxury home platform for upscale property listings and interior design inspirations. Here people can choose their favorite house with the help of the website "Regal House".
+
+# features
+- firebase
+- prop-types
+- sweetAleart
+- React icon
+- validation
+
+# Implement of three packages:
+- react-hook-form
+- aos-package
+- swiper-slider
+
+# Website name: Regal House
+# live link: 

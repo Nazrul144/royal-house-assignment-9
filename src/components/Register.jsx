@@ -8,8 +8,7 @@ import app from '../firebaseProvider/firebase.config';
 import { AuthContext } from './provider/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 
 
@@ -79,6 +78,10 @@ const Register = () => {
                 .catch(error => {
                     console.log(error)
                 })
+
+
+
+                
             
             })
             .catch(error => {
@@ -124,7 +127,7 @@ const Register = () => {
             </Helmet>
          
             <div className="loginDiv">
-                <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 mt-8 mx-auto shadow-xl">
+                <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 mt-44 lg:mt-8 mx-auto shadow-xl">
                     <h1 className="text-2xl font-bold text-center">Register Now!</h1>
 
 
@@ -218,7 +221,6 @@ const Register = () => {
                     </p>
                 </div>
             </div>
-            <ToastContainer></ToastContainer>
         </div>
     );
 };

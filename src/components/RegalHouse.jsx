@@ -23,7 +23,7 @@ const RegalHouse = () => {
             <Helmet>
                 <title>Regal House | Regal House</title>
             </Helmet>
-            <h1 className='mt-6 text-center text-sky-400 text-6xl font-bold mb-16'>Welcome to our Regal World House</h1>
+            <h1 className='mt-6 text-center text-sky-400 text-xl lg:text-6xl font-bold mb-16'>Welcome to our Regal World House</h1>
             <Marquee className='text-4xl text-blue-400 font-bold' pauseOnHover={true} gradientColor={string}>
                 Step into elegance at Regal House, where luxury meets comfort. Explore our exquisite collections, indulge in opulent amenities, and experience the epitome of refined living. Welcome to a world of splendor.
             </Marquee>
