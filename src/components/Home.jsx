@@ -5,11 +5,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/bundle';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import Marquee from "react-fast-marquee";
 
 import { Helmet } from 'react-helmet-async';
+import { string } from "prop-types";
 const Home = () => {
 
-    const { houses } = useContext(AuthContext);
+    const { houses, loading } = useContext(AuthContext);
+    if (loading) {
+        return <div className='flex justify-center items-center'>
+            <span className="loading loading-bars loading-md "></span>
+        </div>
+    }
     console.log(houses)
     return (
         <div>
@@ -17,10 +24,12 @@ const Home = () => {
                 <title>Regal House | Home</title>
             </Helmet>
 
-            <h1>This is home!</h1>
+            <Marquee className='text-4xl text-blue-400 font-bold' pauseOnHover={true} gradientColor={string}>
+                Welcome to Regal House World!
+            </Marquee>
 
+            <div className="mt-12">
             <Swiper
-
                 spaceBetween={30}
                 centeredSlides={true}
                 autoplay={{
@@ -83,10 +92,11 @@ const Home = () => {
                     <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">Slide10</h1>
                 </div></SwiperSlide>
             </Swiper>
+            </div>
             <div>
                 <h1 className="text-center font-bold text-4xl mt-12">Our Service</h1>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div  data-aos="fade-up" className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 ">
 
                 {
                     houses.map(house => <Card key={house.id} house={house}></Card>)

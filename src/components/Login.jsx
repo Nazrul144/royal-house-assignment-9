@@ -5,11 +5,18 @@ import { IoKey, IoMail } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import app from "../firebaseProvider/firebase.config";
 import { AuthContext } from "./provider/AuthProvider";
+import {useLocation, useNavigate} from 'react-router-dom'
 
 const Login = () => {
+
     const [showPassword, setShowPassword] = useState(false);
     const [success, setSuccess] = useState('')
     const [registerError, setRegisterError] = useState('');
+
+
+    const location = useLocation()
+    console.log(location);
+    const navigate = useNavigate()
 
     const auth = getAuth(app);
 
@@ -25,6 +32,9 @@ const Login = () => {
         signInUser(email, password)
         .then(result => {
             console.log(result.user)
+            alert('Successfully logged in!')
+            //Navigate after login:
+            navigate(location?.state ? location.state : '/')
         })
         .catch(error => {
             console.log(error)

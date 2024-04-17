@@ -1,0 +1,93 @@
+[
+    {
+      "id": 1,
+      "title": "Top 10 Tips for Buying Your Dream Home",
+      "author": "John Doe",
+      "date": "2024-04-17",
+      "image": "blog1.jpg",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      "tags": ["Home Buying", "Real Estate", "Tips"]
+    },
+    {
+      "id": 2,
+      "title": "Interior Design Trends for 2024",
+      "author": "Jane Smith",
+      "date": "2024-04-15",
+      "image": "blog2.jpg",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      "tags": ["Interior Design", "Home Decor", "Trends"]
+    },
+    {
+      "id": 3,
+      "title": "Renovation Ideas to Enhance Your Home's Value",
+      "author": "Michael Johnson",
+      "date": "2024-04-12",
+      "image": "blog3.jpg",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      "tags": ["Home Renovation", "Real Estate", "Value"]
+    },
+    {
+      "id": 4,
+      "title": "The Benefits of Sustainable Architecture",
+      "author": "Emily Brown",
+      "date": "2024-04-10",
+      "image": "blog4.jpg",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      "tags": ["Sustainability", "Architecture", "Green Living"]
+    },
+    {
+      "id": 5,
+      "title": "How to Stage Your Home for a Quick Sale",
+      "author": "David Wilson",
+      "date": "2024-04-07",
+      "image": "blog5.jpg",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      "tags": ["Home Selling", "Real Estate", "Staging"]
+    },
+    {
+      "id": 6,
+      "title": "The Importance of Location in Real Estate",
+      "author": "Sarah Lee",
+      "date": "2024-04-05",
+      "image": "blog6.jpg",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      "tags": ["Real Estate", "Location", "Property"]
+    },
+    {
+      "id": 7,
+      "title": "How to Choose the Right Mortgage",
+      "author": "Daniel Clark",
+      "date": "2024-04-02",
+      "image": "blog7.jpg",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      "tags": ["Mortgage", "Home Buying", "Finance"]
+    },
+    {
+      "id": 8,
+      "title": "Tips for Maintaining Your Home's Value",
+      "author": "Emma White",
+      "date": "2024-03-30",
+      "image": "blog8.jpg",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      "tags": ["Home Maintenance", "Real Estate", "Value"]
+    },
+    {
+      "id": 9,
+      "title": "Creating a Cozy Atmosphere in Your Home",
+      "author": "Alex Johnson",
+      "date": "2024-03-28",
+      "image": "blog9.jpg",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      "tags": ["Home Decor", "Cozy Living", "Interior Design"]
+    },
+    {
+      "id": 10,
+      "title": "Understanding Property Taxes: A Guide for Homeowners",
+      "author": "Olivia Smith",
+      "date": "2024-03-25",
+      "image": "blog10.jpg",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      "tags": ["Property Taxes", "Real Estate", "Finance"]
+    }
+  ]
+  

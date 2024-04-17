@@ -39,7 +39,7 @@
     "image": "https://i.ibb.co/kHQ91Tn/full-shot-students-preparing-exam.jpg",
     "description": "Comfortable student housing conveniently located near the university campus. Offering ample space, modern amenities, and a conducive environment for academic success.",
     "price": 150000,
-    "status": "available",
+    "status": "Not available",
     "area": 1000,
     "location": "Purbachal, Narayanganj",
     "facilities": [
@@ -71,7 +71,7 @@
     "image": "https://i.ibb.co/X3Kv1FQ/umbrella-chair-around-beautiful-luxury-outdoor-swimming-pool-with-sea-ocean-view-hotel-resort-holida.jpg",
     "description": "Escape to paradise in this stunning vacation rental overlooking the ocean. Relax in a spacious living room, savor culinary delights in the modern kitchen, and unwind in the serene backyard garden.",
     "price": 5000,
-    "status": "available",
+    "status": "Not available",
     "area": 2000,
     "location": "Cox's Bazar Sea Beach, Chittagong",
     "facilities": [
@@ -105,7 +105,7 @@
     "image": "https://i.ibb.co/2M63g2Z/360-F-660982943-n468-V9swk3gv-JDw96-CVt1yci-WWy5ck2s.jpg",
     "description": "Immerse yourself in urban sophistication in this sleek and modern apartment located in the bustling downtown area. With a spacious living room and inviting balcony, it's urban living at its finest.",
     "price": 400000,
-    "status": "available",
+    "status": "Not available",
     "area": 1000,
     "location": "Jaflong, Sylhet",
     "facilities": [

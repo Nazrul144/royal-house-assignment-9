@@ -1,32 +1,37 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from './provider/AuthProvider';
+import userDefault from '../assets/user.png'
 
 const Navbar = () => {
 
-     const {user, logOut} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+    const [showName, setShowName] = useState(false);
 
-     const handleLogOut = () =>{
+    const handleLogOut = () => {
         logOut()
-        .then(result =>{
-            console.log('Loge out successfully!')
-        })
-        .catch(error => {
-            console.log(error)
-        })
-     }
+            .then(result => {
+                console.log('Loge out successfully!')
+                
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
     const navLinks = <>
-        <li><NavLink to='/' className={({isActive})=> isActive? 'border-2 border-orange-300 rounded-r-lg': ''}>Home</NavLink></li>
-        <li><NavLink to='/updateProfile' className={({isActive})=> isActive? 'border-2 border-orange-300 rounded-r-lg': ''}>UpdateProfile</NavLink></li>
-        <li><NavLink to='/register' className={({isActive})=> isActive? 'border-2 border-orange-300 rounded-r-lg': ''}>Register</NavLink></li>
-        <li><NavLink to='/blog' className={({isActive})=> isActive? 'border-2 border-orange-300 rounded-r-lg': ''}>Blog</NavLink></li>
-        <li><NavLink to='/regalHouse' className={({isActive})=> isActive? 'border-2 border-orange-300 rounded-r-lg': ''}>Regal House</NavLink></li>
+        <li className='font-bold font-poppins'><NavLink to='/' className={({ isActive }) => isActive ? 'border-2 border-orange-300 rounded-r-lg' : ''}>Home</NavLink></li>
+        <li className='font-bold  font-poppins'><NavLink to='/updateProfile' className={({ isActive }) => isActive ? 'border-2 border-orange-300 rounded-r-lg' : ''}>UpdateProfile</NavLink></li>
+        <li className='font-bold  font-poppins'><NavLink to='/userProfile' className={({ isActive }) => isActive ? 'border-2 border-orange-300 rounded-r-lg' : ''}>UserProfile</NavLink></li>
+        <li className='font-bold  font-poppins'><NavLink to='/regalHouse' className={({ isActive }) => isActive ? 'border-2 border-orange-300 rounded-r-lg' : ''}>Regal House</NavLink></li>
+        <li className='font-bold  font-poppins'><NavLink to='/register' className={({ isActive }) => isActive ? 'border-2 border-orange-300 rounded-r-lg' : ''}>Register</NavLink></li>
 
     </>
     console.log(user?.photoURL);
+    console.log("User object:", user);
+
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-100 z-100">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -36,23 +41,32 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">Regal House</a>
+                    <a className="btn btn-ghost text-2xl font-bold font-poppins"> <span className='text-yellow-500' >REGAL</span> <span className='text-sky-400'>HOUSE</span></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                    {navLinks}
+                        {navLinks}
                     </ul>
                 </div>
                 <div className="navbar-end">
+
                     {
                         user ? <>
-                        <span>{user?.email}</span>
-                        <span><img src={user?.photoURL} alt="" /></span>
-                        <a onClick={handleLogOut} className="btn">Sign out</a>
+
+                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar" onMouseEnter={() => setShowName(true)}
+                                onMouseLeave={() => setShowName(false)}>
+                                <div className="w-10 rounded-full">
+                                    <img alt="Tailwind CSS Navbar component" src={user?.photoURL} />
+                                </div>
+                            </div>
+                            {showName && <span className="tooltip tooltip-open tooltip-bottom" data-tip= {user.displayName} ></span>}
+                            <span>{user?.email}</span>
+                            <a onClick={handleLogOut} className="btn">Logout</a>
+
                         </> :
-                        <Link to='/login'><button className='rounded-lg bg-slate-300 p-2 font-bold'>Login</button></Link>
+                            <Link to='/login'><button className='rounded-lg bg-slate-300 p-2 font-bold'>Login</button></Link>
                     }
-                    
+
                 </div>
             </div>
         </div>

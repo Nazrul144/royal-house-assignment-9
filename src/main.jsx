@@ -11,20 +11,20 @@ import {
 import Root from './components/Root/Root.jsx';
 import Home from './components/Home.jsx';
 import Login from './components/Login.jsx';
-import Blog from './components/Blog.jsx';
 import AuthProvider from './components/provider/AuthProvider.jsx';
 import HomeDatails from './components/HomeDatails.jsx';
 import Register from './components/Register.jsx';
 import UpdateProfile from './components/UpdateProfile.jsx';
 import RegalHouse from './components/RegalHouse.jsx';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx';
+import UserProfile from './components/UserProfile.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement: <h1>Page Not found!</h1>,
+    errorElement: <h1 className='font-bold text-2xl text-center'>Page Not found!</h1>,
     children:[
       {
         path: '/',
@@ -38,22 +38,21 @@ const router = createBrowserRouter([
         path: '/register',
         element:<Register></Register>
       },
-    
-      {
-        path: '/blog',
-        element: <Blog></Blog>
-      },
       {
         path: '/updateProfile',
         element: <UpdateProfile></UpdateProfile>
       },
       {
         path: '/homeDetails/:id',
-        element: <HomeDatails></HomeDatails>
+        element: <PrivateRoute><HomeDatails></HomeDatails></PrivateRoute>
       },
       {
         path: '/regalHouse',
         element: <PrivateRoute><RegalHouse></RegalHouse></PrivateRoute>
+      },
+      {
+        path: '/userProfile',
+        element: <UserProfile></UserProfile>
       }
      
     ]

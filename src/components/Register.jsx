@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, signInWithPopup, updateProfile } from "firebase/auth";
 import app from '../firebaseProvider/firebase.config';
 import { AuthContext } from './provider/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -17,8 +18,13 @@ const Register = () => {
 
     const auth = getAuth(app);
    
-    const {createUser} = useContext(AuthContext)
+    const {createUser, loading} = useContext(AuthContext)
     console.log(createUser);
+    if (loading) {
+        return <div className='flex justify-center items-center'>
+            <span className="loading loading-bars loading-md "></span>
+        </div>
+    }
 
     //Gmail authentication:
     const handleRegister = (e) => {
@@ -56,9 +62,12 @@ const Register = () => {
             .then(result => {
                 const user = result.user;
                 setSuccess('User Created Successfully!')
+
+                //Update profile:
                 updateProfile(result.user,{    
                 displayName: username,
                 photoURL:photo
+                
                 })
                 .then(()=> console.log('Profile Updated!'))
                 .catch(error => {
@@ -104,7 +113,10 @@ const Register = () => {
 
     return (
         <div>
-            <h1>This is register page!</h1>
+             <Helmet>
+                <title>Regal House | Register</title>
+            </Helmet>
+         
             <div className="loginDiv border-2 border-red-400">
                 <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 border-2 mx-auto border-green-400 justify-center items-center">
                     <h1 className="text-2xl font-bold text-center">Register Now!</h1>
@@ -137,13 +149,13 @@ const Register = () => {
 
                         </div>
                         <div className="space-y-1 text-sm">
-                            <label htmlFor="password" className="block dark:text-gray-600">Password</label>
+                            <label htmlFor="password" className="block dark:text-gray-600"> Password</label>
 
                             <div className='relative'>
                                 <input type={showPassword ? "text" : "password"}
                                     name="password"
                                     id="password"
-                                    placeholder="Password"
+                                    placeholder=" Choose Password"
                                     required
                                     className="w-full px-8 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 border-2 border-gray-800" />
                                 <div className='absolute top-4 right-3'>

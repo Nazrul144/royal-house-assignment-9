@@ -1,7 +1,15 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
+import { AuthContext } from "./provider/AuthProvider";
 
 
 const UpdateProfile = () => {
+    const { loading } = useContext(AuthContext);
+    if (loading) {
+        return <div className='flex justify-center items-center'>
+            <span className="loading loading-bars loading-md "></span>
+        </div>
+    }
     return (
         <div>
             <Helmet>
