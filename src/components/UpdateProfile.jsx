@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { AuthContext } from "./provider/AuthProvider";
 import { getAuth, updateProfile } from "firebase/auth";
 import app from "../firebaseProvider/firebase.config";
+import Swal from 'sweetalert2'
 const auth = getAuth(app)
 
 const UpdateProfile = () => {
@@ -23,7 +24,13 @@ const UpdateProfile = () => {
                     updateProfile(auth.currentUser,{
                         displayName:name,
                         photoURL:photo
+                        
                     });
+                    Swal.fire({
+                        title: "Updated Successfully!",
+                        text: "You clicked the button!",
+                        icon: "success"
+                      });
                 }
     
 

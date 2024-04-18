@@ -23,7 +23,7 @@ const AboutUs = () => {
             </p>
             <h3 className='text-xl font-bold text-sky-400 mt-6 animate__animated animate__jackInTheBox'>Our Commitment</h3>
             <p>
-            Quality is the cornerstone of everything we do. From the materials we source to the craftsmanship behind each piece, we hold ourselves to the highest standards of excellence. We take pride in offering luxury furnishings that not only exude beauty but also stand the test of time.
+            Quality is the cornerstone of everything we do. From the materials, we source to the craftsmanship behind each piece, we hold ourselves to the highest standards of excellence. We take pride in offering luxury furnishings that not only exude beauty but also stand the test of time.
             </p>
             <h3 className='font-bold text-sky-400 text-xl mt-6 animate__animated animate__rotateIn'>Discover Luxury, Redefine Elegance</h3>
             <p className='animate__animated animate__lightSpeedInRight'>
