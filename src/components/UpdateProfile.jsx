@@ -1,18 +1,31 @@
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "./provider/AuthProvider";
-
+import { getAuth, updateProfile } from "firebase/auth";
+import app from "../firebaseProvider/firebase.config";
+const auth = getAuth(app)
 
 const UpdateProfile = () => {
     const { loading } = useContext(AuthContext);
-
-
 
     if (loading) {
         return <div className='flex justify-center items-center'>
             <span className="loading loading-bars loading-md "></span>
         </div>
     }
+
+    
+                //Update profile:
+             const handleProfile = (e) => {
+                    e.preventDefault()
+                    const name = e.target.name.value;
+                    const photo = e.target.photo.value;
+                    updateProfile(auth.currentUser,{
+                        displayName:name,
+                        photoURL:photo
+                    });
+                }
+    
 
 
     return (
@@ -28,7 +41,7 @@ const UpdateProfile = () => {
                             <h1 className="text-5xl font-bold">Update Profile</h1>
                         </div>
                         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                            <form className="card-body">
+                            <form onSubmit={handleProfile} className="card-body">
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Name</span>
