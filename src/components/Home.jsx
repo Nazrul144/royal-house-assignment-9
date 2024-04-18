@@ -9,6 +9,7 @@ import Marquee from "react-fast-marquee";
 
 import { Helmet } from 'react-helmet-async';
 import { string } from "prop-types";
+import { Link } from "react-router-dom";
 const Home = () => {
 
     const { houses} = useContext(AuthContext);
@@ -42,69 +43,69 @@ const Home = () => {
             >
                 <SwiperSlide> <div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                     <img src="/slider/house (1).jpg" alt="" className="w-full h-auto" />
-                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
-                    Very expensive house and eco-friendly! <br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6 ml-4">
+                    Very expensive house and eco-friendly! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button></Link>
                         </p></div></h1>
                     
                 </div></SwiperSlide>
                 <SwiperSlide>  <div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                     <img src="/slider/house (2).jpg" alt="" className="w-full h-auto" />
-                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
-                    Royal house for the people! <br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6 ml-4">
+                    Royal house for the people! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button></Link>
                         </p></div></h1>
                 </div></SwiperSlide>
                 <SwiperSlide>
                     <div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                         <img src="/slider/house (3).jpg" alt="" className="w-full h-auto" />
-                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
-                    Explore this house and enjoy your life! <br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6 ml-4">
+                    Explore this house and enjoy your life! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary mt-3 text-xl  font-bold">Contact us</button></Link>
                         </p></div></h1>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                         <img src="/slider/house (4).jpg" alt="" className="w-full h-auto" />
-                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
-                    Tremendous house in the world! <br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6 ml-4">
+                    Tremendous house in the world! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary mt-3 text-xl font-bold ">Contact us</button></Link>
                         </p></div> </h1>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                         <img src="/slider/house (5).jpg" alt="" className="w-full h-auto" />
-                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
-                    Look like a king place, Explore!. <br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6 ml-4">
+                    Look like a king place, Explore!. <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary mt-3 text-xl font-bold ">Contact us</button></Link>
                         </p></div></h1>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide><div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                     <img src="/slider/house (6).jpg" alt="" className="w-full h-auto" />
-                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
-                    Lovely house to live with a family!<br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6 ml-4">
+                    Lovely house to live with a family!<br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary mt-3 text-xl font-bold ">Contact us</button></Link>
                         </p></div></h1>
                 </div></SwiperSlide>
                 <SwiperSlide><div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                     <img src="/slider/house (7).jpg" alt="" className="w-full h-auto" />
-                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
-                    You should definitely visit it! <br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6 ml-4">
+                    You should definitely visit it! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary mt-3 text-xl font-bold ">Contact us</button></Link>
                         </p></div></h1>
                 </div></SwiperSlide>
                 <SwiperSlide><div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                     <img src="/slider/house (8).jpg" alt="" className="w-full h-auto" />
-                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
-                    Very beautiful house and eco-friendly! <br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6 ml-4">
+                    Very beautiful house and eco-friendly! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary mt-3 text-xl font-bold ">Contact us</button></Link>
                         </p></div></h1>
                 </div></SwiperSlide>
                 <SwiperSlide><div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                     <img src="/slider/house (9).jpg" alt="" className="w-full h-auto" />
-                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
-                    Gorgeous and mind blowing house! <br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6 ml-4">
+                    Gorgeous and mind blowing house! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary mt-3 text-xl font-bold ">Contact us</button></Link>
                         </p></div></h1>
                 </div></SwiperSlide>
                 <SwiperSlide><div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                     <img src="/slider/house_final.jpeg" alt="" className="w-full h-auto" />
-                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
-                    Don't forget to explore this house! <br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6 ml-4">
+                    Don't forget to explore this house! <br /> <small className="text-red-500 ">To know more details</small> <br /> <Link to='/contact'><button className="btn btn-primary mt-3 text-xl font-bold ">Contact us</button></Link>
                         </p></div></h1>
                 </div></SwiperSlide>
             </Swiper>

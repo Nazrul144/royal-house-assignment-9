@@ -25,11 +25,11 @@ const Navbar = () => {
             })
     }
     const navLinks = <>
-        <li className='font-bold font-poppins '><NavLink to='/' className={({ isActive }) => isActive ? 'border-2 border-orange-300 rounded-r-lg' : ''}>Home</NavLink></li>
-        <li className='font-bold  font-poppins'><NavLink to='/updateProfile' className={({ isActive }) => isActive ? 'border-2 border-orange-300 rounded-r-lg' : ''}>UpdateProfile</NavLink></li>
-        <li className='font-bold  font-poppins'><NavLink to='/userProfile' className={({ isActive }) => isActive ? 'border-2 border-orange-300 rounded-r-lg' : ''}>UserProfile</NavLink></li>
-        <li className='font-bold  font-poppins'><NavLink to='/regalHouse' className={({ isActive }) => isActive ? 'border-2 border-orange-300 rounded-r-lg' : ''}>Regal House</NavLink></li>
-        <li className='font-bold  font-poppins'><NavLink to='/register' className={({ isActive }) => isActive ? 'border-2 border-orange-300 rounded-r-lg' : ''}>Register</NavLink></li>
+        <li className='font-bold font-poppins '><NavLink to='/' className={({ isActive }) => isActive ? 'border-2 border-red-500 rounded-r-lg' : ''}>Home</NavLink></li>
+        <li className='font-bold  font-poppins'><NavLink to='/updateProfile' className={({ isActive }) => isActive ? 'border-2 border-red-500 rounded-r-lg' : ''}>UpdateProfile</NavLink></li>
+        <li className='font-bold  font-poppins'><NavLink to='/userProfile' className={({ isActive }) => isActive ? 'border-2 border-red-500 rounded-r-lg' : ''}>UserProfile</NavLink></li>
+        <li className='font-bold  font-poppins'><NavLink to='/regalHouse' className={({ isActive }) => isActive ? 'border-2 border-red-500 rounded-r-lg' : ''}>Regal House</NavLink></li>
+        <li className='font-bold  font-poppins'><NavLink to='/register' className={({ isActive }) => isActive ? 'border-2 border-red-500 rounded-r-lg' : ''}>Register</NavLink></li>
 
     </>
     console.log(user?.photoURL);
