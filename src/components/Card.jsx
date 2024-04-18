@@ -4,7 +4,7 @@ import 'animate.css';
 import PropTypes from 'prop-types';
 
 const Card = ({house}) => {
-    const {segment, estate_title, image,  price, status,  location, facilities,} = house;
+    const {segment, estate_title, image,  price, status} = house;
     return (
         <div>
             <div className="card h-full bg-base-100 shadow-xl animate__animated animate__zoomInRightbg-sky-500 transition-colors duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 ">
@@ -26,4 +26,8 @@ const Card = ({house}) => {
     );
 };
 
+Card.propTypes = {
+    house: PropTypes.node 
+  };
+  
 export default Card;

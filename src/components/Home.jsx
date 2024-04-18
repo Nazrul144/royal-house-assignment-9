@@ -20,11 +20,11 @@ const Home = () => {
                 <title>Regal House | Home</title>
             </Helmet>
 
-            <Marquee className='text-4xl text-blue-400 font-bold' pauseOnHover={true} gradientColor={string}>
+            {/* <Marquee className='text-4xl text-blue-400 font-bold' pauseOnHover={true} gradientColor={string}>
                 Welcome to Regal House World!
-            </Marquee>
+            </Marquee> */}
 
-            <div className="mt-32 lg:mt-10">
+            <div className="mt-44 lg:mt-10">
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}

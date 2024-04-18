@@ -27,7 +27,7 @@ const Navbar = () => {
     const navLinks = <>
         <li className='font-bold font-poppins '><NavLink to='/' className={({ isActive }) => isActive ? 'border-2 border-red-500 rounded-r-lg' : ''}>Home</NavLink></li>
         {
-            user && <div className='flex'>
+            user && <div className='lg:flex'>
                 <li className='font-bold  font-poppins'><NavLink to='/updateProfile' className={({ isActive }) => isActive ? 'border-2 border-red-500 rounded-r-lg' : ''}>UpdateProfile</NavLink></li>
                 <li className='font-bold  font-poppins'><NavLink to='/userProfile' className={({ isActive }) => isActive ? 'border-2 border-red-500 rounded-r-lg' : ''}>UserProfile</NavLink></li>
             </div>
@@ -53,7 +53,7 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost lg:text-2xl font-bold font-poppins"> <span className='text-red-500' >REGAL</span> <span className='text-blue-600'>HOUSE</span></Link>
+                    <Link to='/' className="btn btn-ghost lg:text-2xl lg:font-bold font-poppins"> <span className='text-red-500' >REGAL</span> <span className='text-blue-600'>HOUSE</span></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -72,7 +72,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                             {showName && <span className="tooltip tooltip-open tooltip-bottom" data-tip={user?.displayName} ></span>}
-                            <span >{user?.email}</span>
+                            <span className='hidden lg:inline' >{user?.email}</span>
                             <a onClick={handleLogOut} className="btn btn-info font-bold text-lg">Logout</a>
 
                         </> :

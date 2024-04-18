@@ -1,7 +1,8 @@
 import 'animate.css';
+import PropTypes from 'prop-types';
 
 const ShowCard = ({ regalHouse }) => {
-    const { id, description, image, segment } = regalHouse;
+    const { description, image, segment } = regalHouse;
 
    
     return (
@@ -20,4 +21,7 @@ const ShowCard = ({ regalHouse }) => {
     );
 };
 
+ShowCard.propTypes = {
+    regalHouse: PropTypes.node 
+  };
 export default ShowCard;
