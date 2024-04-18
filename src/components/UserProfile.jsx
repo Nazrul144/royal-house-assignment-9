@@ -37,7 +37,7 @@ const UserProfile = () => {
                 <div  className='col-span-8 '>
                     <h1  className=' text-red-500 text-xl lg:text-4xl font-bold text-center mt-6 animate__animated animate__bounce'>Welcome! Nazrul Islam</h1>
                     <p className="lg:py-6 lg:px-8 font-poppins font-medium text-xl text-justify mt-24 animate__animated animate__backInUp "> Hi, I am Nazrul Islam. I am running 26. I am from aristocratic muslim family. I am doing BSC on the
-                        department of CSE Computer 'Science and Engineering'. Right now, I am also a student of Programming Hero where I am
+                        department of CSE Computer 'Science and Engineering'. Right now, I am also a student of <span className='text-red-500'>Programming Hero</span> where I am
                         learning web development. My future plane is that I want to touch the zenith of the success that is to be a world class
                         web developer. Thank you for reading my Bio. </p>
                 </div>

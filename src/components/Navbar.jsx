@@ -17,8 +17,8 @@ const Navbar = () => {
                     title: "Successfully Logged out!",
                     text: "You clicked the button!",
                     icon: "success"
-                  });
-                
+                });
+
             })
             .catch(error => {
                 console.log(error)
@@ -26,8 +26,12 @@ const Navbar = () => {
     }
     const navLinks = <>
         <li className='font-bold font-poppins '><NavLink to='/' className={({ isActive }) => isActive ? 'border-2 border-red-500 rounded-r-lg' : ''}>Home</NavLink></li>
-        <li className='font-bold  font-poppins'><NavLink to='/updateProfile' className={({ isActive }) => isActive ? 'border-2 border-red-500 rounded-r-lg' : ''}>UpdateProfile</NavLink></li>
-        <li className='font-bold  font-poppins'><NavLink to='/userProfile' className={({ isActive }) => isActive ? 'border-2 border-red-500 rounded-r-lg' : ''}>UserProfile</NavLink></li>
+        {
+            user && <div className='flex'>
+                <li className='font-bold  font-poppins'><NavLink to='/updateProfile' className={({ isActive }) => isActive ? 'border-2 border-red-500 rounded-r-lg' : ''}>UpdateProfile</NavLink></li>
+                <li className='font-bold  font-poppins'><NavLink to='/userProfile' className={({ isActive }) => isActive ? 'border-2 border-red-500 rounded-r-lg' : ''}>UserProfile</NavLink></li>
+            </div>
+        }
         <li className='font-bold  font-poppins'><NavLink to='/regalHouse' className={({ isActive }) => isActive ? 'border-2 border-red-500 rounded-r-lg' : ''}>Regal House</NavLink></li>
         <li className='font-bold  font-poppins'><NavLink to='/register' className={({ isActive }) => isActive ? 'border-2 border-red-500 rounded-r-lg' : ''}>Register</NavLink></li>
 
@@ -67,7 +71,7 @@ const Navbar = () => {
                                     <img alt="Tailwind CSS Navbar component" src={user?.photoURL} />
                                 </div>
                             </div>
-                            {showName && <span className="tooltip tooltip-open tooltip-bottom" data-tip= {user?.displayName} ></span>}
+                            {showName && <span className="tooltip tooltip-open tooltip-bottom" data-tip={user?.displayName} ></span>}
                             <span >{user?.email}</span>
                             <a onClick={handleLogOut} className="btn btn-info font-bold text-lg">Logout</a>
 
