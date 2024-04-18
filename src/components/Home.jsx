@@ -42,50 +42,70 @@ const Home = () => {
             >
                 <SwiperSlide> <div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                     <img src="/slider/house (1).jpg" alt="" className="w-full h-auto" />
-                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white lg:text-4xl font-bold">Explore and discover this house, it's one of the beautiful in the world! <span className="text-yellow-500">Price: $2000000</span></h1>
+                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
+                    Very expensive house and eco-friendly! <br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                        </p></div></h1>
                     
                 </div></SwiperSlide>
                 <SwiperSlide>  <div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                     <img src="/slider/house (2).jpg" alt="" className="w-full h-auto" />
-                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white lg:text-4xl font-bold">Let's find the beauty of the house, to book this house explore our website. <span className="text-red-500">Price: $2000000</span></h1>
+                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
+                    Royal house for the people! <br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                        </p></div></h1>
                 </div></SwiperSlide>
                 <SwiperSlide>
                     <div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                         <img src="/slider/house (3).jpg" alt="" className="w-full h-auto" />
-                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white lg:text-4xl font-bold">Tremendous weather belong to this house. Specially splendid sunrise that you can enjoy.<span className="text-yellow-500">Price: $24000000</span></h1>
+                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
+                    Explore this house and enjoy your life! <br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                        </p></div></h1>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                         <img src="/slider/house (4).jpg" alt="" className="w-full h-auto" />
-                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white lg:text-4xl font-bold">Is not it awsome? Definitely you will get more pleasure if you live this house. <span className="text-red-400">Price: $2220000</span> </h1>
+                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
+                    Tremendous house in the world! <br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                        </p></div> </h1>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                         <img src="/slider/house (5).jpg" alt="" className="w-full h-auto" />
-                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white lg:text-4xl font-bold">Visit our website and get more and more fabulous house and share it with your friends <span className="text-green-500">Price: $65000000</span></h1>
+                        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
+                    Look like a king place, Explore!. <br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                        </p></div></h1>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide><div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                     <img src="/slider/house (6).jpg" alt="" className="w-full h-auto" />
-                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white lg:text-4xl font-bold">Very lovely house! Perfect place to live with your family. Hope you will enjoy. <span className="text-green-500">Price: $11000000</span></h1>
+                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
+                    Lovely house to live with a family!<br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                        </p></div></h1>
                 </div></SwiperSlide>
                 <SwiperSlide><div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                     <img src="/slider/house (7).jpg" alt="" className="w-full h-auto" />
-                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white lg:text-4xl font-bold">Explore and enjoy our beautiful website. <span className="text-red-400">Price: $97000000</span></h1>
+                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
+                    You should definitely visit it! <br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                        </p></div></h1>
                 </div></SwiperSlide>
                 <SwiperSlide><div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                     <img src="/slider/house (8).jpg" alt="" className="w-full h-auto" />
-                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white lg:text-4xl font-bold">To be benefited, it's recommended to discover our website <span className="text-black">Price: $13500000</span></h1>
+                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
+                    Very beautiful house and eco-friendly! <br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                        </p></div></h1>
                 </div></SwiperSlide>
                 <SwiperSlide><div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                     <img src="/slider/house (9).jpg" alt="" className="w-full h-auto" />
-                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white lg:text-4xl font-bold">We are here to provide the best service that house service. <span className="text-blue-400">Price: $25000000</span></h1>
+                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
+                    Gorgeous and mind blowing house! <br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                        </p></div></h1>
                 </div></SwiperSlide>
                 <SwiperSlide><div className="flex justify-center items-center bg-no-repeat bg-cover relative">
                     <img src="/slider/house_final.jpeg" alt="" className="w-full h-auto" />
-                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white lg:text-4xl font-bold">Thank you so much to visit our website. Get beautiful house and enjoy.<span className="text-black">Price: $7500000</span></h1>
+                    <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:text-3xl font-bold"><div className="w-96 h-56  bg-[#f5d0fe] rounded-xl duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"><p className="p-6">
+                    Don't forget to explore this house! <br /> <small className="text-red-500">To know more details</small> <br /> <button className="btn btn-primary mt-3 text-xl font-bold">Contact us</button>
+                        </p></div></h1>
                 </div></SwiperSlide>
             </Swiper>
             </div>

@@ -6,7 +6,7 @@ const ShowCard = ({ regalHouse }) => {
    
     return (
         <div>
-            <div className="card h-full bg-base-100 shadow-xl animate__animated animate__zoomIn ">
+            <div className="card h-full bg-base-100 shadow-xl animate__animated animate__zoomIn  transition-colors duration-1000 ease-in-out hover:bg-violet-200 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 ">
                 <figure><img src={image} alt="house" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">
