@@ -67,19 +67,20 @@ const Register = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
+                console.log('user from user in 70  number line',user)
                 setSuccess('User Created Successfully!')
                 
 
-                // //Update profile:
-                // updateProfile(result.user,{    
-                // displayName: username,
-                // photoURL:photo
+                //Update profile:
+                updateProfile(result.user,{    
+                displayName: username,
+                photoURL:photo
                 
-                // })
-                // .then(()=> console.log('Profile Updated!'))
-                // .catch(error => {
-                //     console.log(error)
-                // })
+                })
+                .then(()=> console.log('Profile Updated!'))
+                .catch(error => {
+                    console.log(error)
+                })
 
 
 
@@ -128,7 +129,7 @@ const Register = () => {
                 <title>Regal House | Register</title>
             </Helmet>
          
-            <div className="loginDiv">
+            <div>
                 <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 mt-44 lg:mt-8 mx-auto shadow-xl">
                     <h1 className="text-2xl font-bold text-center">Register Now!</h1>
 

@@ -8,7 +8,7 @@ const Contact = () => {
             <Helmet>
                 <title>Regal House | Contact Us</title>
             </Helmet>
-            <section className="contact-us">
+            <section className="contact-us ml-8">
                 <div className="contact-info">
                     <h2 className='font-bold animate__animated animate__backInDown'>Contact Us</h2>
                     <p className='animate__animated animate__backInDown'>Thank you for your interest in Regal House. We value your demand, feedback, and requests, and we're here to assist you in any way we can. Please find our contact information below:</p>

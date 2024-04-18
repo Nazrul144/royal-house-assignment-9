@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from './provider/AuthProvider';
 import userDefault from '../assets/user.png'
+import Swal from 'sweetalert2'
+
 
 const Navbar = () => {
 
@@ -11,7 +13,11 @@ const Navbar = () => {
     const handleLogOut = () => {
         logOut()
             .then(result => {
-                alert('Successfully logged out!')
+                Swal.fire({
+                    title: "Successfully Logged out!",
+                    text: "You clicked the button!",
+                    icon: "success"
+                  });
                 
             })
             .catch(error => {
@@ -19,7 +25,7 @@ const Navbar = () => {
             })
     }
     const navLinks = <>
-        <li className='font-bold font-poppins'><NavLink to='/' className={({ isActive }) => isActive ? 'border-2 border-orange-300 rounded-r-lg' : ''}>Home</NavLink></li>
+        <li className='font-bold font-poppins '><NavLink to='/' className={({ isActive }) => isActive ? 'border-2 border-orange-300 rounded-r-lg' : ''}>Home</NavLink></li>
         <li className='font-bold  font-poppins'><NavLink to='/updateProfile' className={({ isActive }) => isActive ? 'border-2 border-orange-300 rounded-r-lg' : ''}>UpdateProfile</NavLink></li>
         <li className='font-bold  font-poppins'><NavLink to='/userProfile' className={({ isActive }) => isActive ? 'border-2 border-orange-300 rounded-r-lg' : ''}>UserProfile</NavLink></li>
         <li className='font-bold  font-poppins'><NavLink to='/regalHouse' className={({ isActive }) => isActive ? 'border-2 border-orange-300 rounded-r-lg' : ''}>Regal House</NavLink></li>
@@ -27,11 +33,13 @@ const Navbar = () => {
 
     </>
     console.log(user?.photoURL);
+    console.log(user?.email);
+    console.log(user?.displayName);
     console.log("User object:", user);
 
     return (
         <div>
-            <div className="navbar bg-base-100 z-100">
+            <div className="navbar bg-base-100 z-100 bg-gradient-to-r from-indigo-200 cyan-500 via-purple-200 to-pink-200">
                 <div className="navbar-start z-100">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -41,7 +49,7 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost lg:text-2xl font-bold font-poppins"> <span className='text-yellow-500' >REGAL</span> <span className='text-sky-400'>HOUSE</span></Link>
+                    <Link to='/' className="btn btn-ghost lg:text-2xl font-bold font-poppins"> <span className='text-red-500' >REGAL</span> <span className='text-blue-600'>HOUSE</span></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -59,12 +67,12 @@ const Navbar = () => {
                                     <img alt="Tailwind CSS Navbar component" src={user?.photoURL} />
                                 </div>
                             </div>
-                            {showName && <span className="tooltip tooltip-open tooltip-bottom" data-tip= {user.displayName} ></span>}
+                            {showName && <span className="tooltip tooltip-open tooltip-bottom" data-tip= {user?.displayName} ></span>}
                             <span >{user?.email}</span>
-                            <a onClick={handleLogOut} className="btn">Logout</a>
+                            <a onClick={handleLogOut} className="btn btn-info font-bold text-lg">Logout</a>
 
                         </> :
-                            <Link to='/login'><button className='rounded-lg bg-slate-300 p-2 font-bold'>Login</button></Link>
+                            <Link to='/login'><button className='rounded-lg text-lg bg-slate-300 p-2 font-bold btn btn-info'>Login</button></Link>
                     }
 
                 </div>

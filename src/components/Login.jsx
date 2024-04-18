@@ -14,10 +14,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'animate.css';
 
+import Swal from 'sweetalert2'
 
 const Login = () => {
-
-
+    
     const [showPassword, setShowPassword] = useState(false);
     const [success, setSuccess] = useState('')
     const [registerError, setRegisterError] = useState('');
@@ -45,7 +45,11 @@ const Login = () => {
         signInUser(email, password)
         .then(result => {
             console.log(result.user)
-            alert('Logged in successfully!')
+            Swal.fire({
+                title: "Successfully logged in!",
+                text: "You clicked the button!",
+                icon: "success"
+              });
             //Navigate after login:
             navigate(location?.state ? location.state : '/')
         })
@@ -73,6 +77,7 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email,password)
         .then(result =>{
             console.log(result.user)
+            
             setSuccess('Logged in successfully!')
         })
         .catch(error => {
@@ -108,7 +113,7 @@ const Login = () => {
             })
     }
     return (
-        <div>
+        <div >
             <div data-aos-easing="zoom-in-up" data-aos-duration='1000' className="loginDiv">
                 <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 shadow-xl mx-auto mt-32 lg:8 justify-center items-center">
                     <h1 className="text-2xl font-bold text-center">Login</h1>

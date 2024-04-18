@@ -23,14 +23,6 @@ const AuthProvider = ({children}) => {
        return createUserWithEmailAndPassword(auth, email, password)
     }
 
-    //Update profile:
-    const updateUserProfile = (name, image)=>{
-        return updateProfile(auth.currentUser, {
-            displayName: name,
-            photoURL: image
-          })
-          
-    }
     
 
     const signInUser = (email, password) => {
@@ -58,7 +50,7 @@ const AuthProvider = ({children}) => {
     }, [] )
 
 
-    const authInfo = {houses, user, createUser, signInUser, loading, logOut, updateUserProfile}
+    const authInfo = {houses, user, createUser, signInUser, loading, logOut}
    
     return (
         <AuthContext.Provider value={authInfo}>

@@ -28,8 +28,8 @@ const HomeDetails = () => {
                         <li className="font-semibold text-xl"> <span className="text-blue-400">Facilities:</span> {house.facilities}.</li>
                     
                         <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start mt-2">
-                            <Link to='/' rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-bold rounded bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50 ">Back to home</Link>
-                            <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg border rounded border-gray-100 dark:border-gray-800 text-yellow-400 font-bold">Buy Now</a>
+                            <Link to='/' rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-bold rounded bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50  hover:bg-sky-700 hover:text-white duration-1000 ease-in-out">Back to home</Link>
+                            <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg border rounded border-gray-100 dark:border-gray-800 text-yellow-400 font-bold hover:bg-sky-700 hover:text-white duration-1000 ease-in-out">Buy Now</a>
                             
                         </div>
                     </div>

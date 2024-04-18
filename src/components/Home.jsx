@@ -92,7 +92,7 @@ const Home = () => {
             <div>
                 <h1 className="text-center font-bold text-4xl mt-12">Our Service</h1>
             </div>
-            <div  data-aos="fade-up" data-aos-duration='1000' className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+            <div  data-aos="fade-up" data-aos-duration='1000' className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
 
                 {
                     houses.map(house => <Card key={house.id} house={house}></Card>)
