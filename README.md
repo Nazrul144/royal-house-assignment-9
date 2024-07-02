@@ -6,7 +6,7 @@ Regal House is an innovative platform designed to streamline property management
 
 # Features
 - Authentication
-- Filtering by price
+- Routing
 - Good Usability
 
 
